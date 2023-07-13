@@ -90,7 +90,7 @@ class YoutubeScraper:
             total_joining_date_elements = driver.find_elements(By.CSS_SELECTOR, 'div#right-column yt-formatted-string.style-scope.ytd-channel-about-metadata-renderer')
 
             if len(total_joining_date_elements) > 1:
-                total_joining_date_elements = total_joining_date_elements[1].text  # Indexing starts from 0, so 1 means the second element.
+                total_joining_date_elements = total_joining_date_elements[1].text  
                 print("Joining Date:", total_joining_date_elements)
                 channel_data["Joining Date"] = total_joining_date_elements
             else:
@@ -100,7 +100,7 @@ class YoutubeScraper:
             total_views_elements = driver.find_elements(By.CSS_SELECTOR, 'div#right-column yt-formatted-string.style-scope.ytd-channel-about-metadata-renderer')
 
             if len(total_views_elements) > 1:
-                total_views = total_views_elements[2].text  # Indexing starts from 0, so 1 means the second element.
+                total_views = total_views_elements[2].text 
                 print("Total Views:", total_views)
                 channel_data["Total Views"] = total_views
             else:
